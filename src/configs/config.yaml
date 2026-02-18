@@ -1,0 +1,21 @@
+training:
+  
+  batch_size: 4
+  
+  gradient_accumulation_steps: 4  
+  
+ 
+  segment_size: 4096  
+  
+  # Включаем mixed precision
+  fp16_run: true
+  fp16_opt_level: "O1"
+  
+ 
+  num_workers: 2 
+  
+ 
+model:
+  generator:
+    type: "hifigan_v2"  # всего 0.92M параметров
+    upsample_initial_channel: 128  # ключевое отличие V2
